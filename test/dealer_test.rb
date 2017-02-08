@@ -47,4 +47,39 @@ attr_reader :dealer, :navy_bean, :red_panther, :green_dragon, :pink_butterfly
   def test_can_find_all_of_a_make
     assert_equal [navy_bean, pink_butterfly], dealer.find_many("Nissan")
   end
+
+  def test_can_order_year_oldest_to_youngest
+    skip
+    assert_equal [1983, 1999, 2000, 2010], dealer.youngest_to_oldest_years
+  end
+
+  def test_can_find_first_year_chronologically
+    skip
+    assert_equal 1983, dealer.find_first_year_chronologically
+  end
+
+  def test_can_order_by_year
+    skip
+    assert_equal [red_panther, green_dragon, pink_butterfly, navy_bean], dealer.order_model_by_year
+  end
+
+  def test_can_find_youngest_model
+    skip
+    assert_equal navy_bean, dealer.youngest_model
+  end
+
+  def test_can_find_oldest_model
+    skip
+    assert_equal red_panther, dealer.oldest_model
+  end
+
+  def test_all_models_are_from_the_year_1983
+    skip
+    assert_equal false, dealer.made_in_the_year(1983)
+  end
+
+  def test_are_any_hondas
+    skip
+    assert_equal true, dealer.any_of_this_make("Honda")
+  end
 end
