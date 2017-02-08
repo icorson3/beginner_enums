@@ -49,10 +49,12 @@ attr_reader :dealer, :navy_bean, :red_panther, :green_dragon, :pink_butterfly
   end
 
   def test_can_order_year_oldest_to_youngest
+    skip
     assert_equal [1983, 1999, 2000, 2010], dealer.youngest_to_oldest_years
   end
 
   def test_can_find_first_year_chronologically
+    skip
     assert_equal 1983, dealer.find_first_year_chronologically
   end
 
